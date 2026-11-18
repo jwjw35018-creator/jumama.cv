@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>جمانة الزهراني | Jumana Alzahrani</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap">
+<style>
+:root{--bg:#061233;--surface:rgba(8,20,52,.9);--ink:#EAF0FB;--muted:#A9B6CE;--accent:#5FD8F0;--line:rgba(234,240,251,.18);--node:95,216,240;
+color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#EEF3FB;--surface:rgba(255,255,255,.9);--ink:#10182B;--muted:#4B5870;--accent:#0B6F8A;--line:rgba(16,24,43,.14);--node:11,111,138;color-scheme:light}}
+:root[data-theme="light"]{--bg:#EEF3FB;--surface:rgba(255,255,255,.9);--ink:#10182B;--muted:#4B5870;--accent:#0B6F8A;--line:rgba(16,24,43,.14);--node:11,111,138;color-scheme:light}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Tajawal","Segoe UI",Tahoma,Arial,sans-serif;line-height:1.75;font-size:17px}
+#net{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+main{position:relative;z-index:1;min-height:100vh;max-width:820px;margin:0 auto;padding:56px 20px 72px}
+header{text-align:center;margin-bottom:34px}
+h1{margin:0;font-size:clamp(40px,9vw,68px);font-weight:800;line-height:1.2}
+.en-name{margin:2px 0 0;font-size:clamp(20px,4.5vw,28px);font-weight:500;color:var(--muted);direction:ltr}
+.role{margin:14px 0 0;font-size:clamp(18px,3.6vw,22px);font-weight:700;color:var(--accent)}
+.role span{display:block;font-weight:500;color:var(--muted);direction:ltr;font-size:.9em}
+.contact{margin:16px 0 0;display:flex;flex-wrap:wrap;justify-content:center;gap:6px 22px;font-size:15px;color:var(--muted)}
+.contact a{color:inherit}
+.home{display:grid;gap:16px;margin:34px auto 0;max-width:520px}
+.pill{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:20px 26px;border-radius:999px;background:#fff;color:#10182B;font:inherit;font-size:21px;font-weight:700;text-decoration:none;border:0;cursor:pointer;box-shadow:0 0 28px rgba(95,216,240,.22)}
+.home[hidden]{display:none}
+.pill svg{flex:none;width:22px;height:22px}
+.pill{direction:ltr}.pill span{flex:1;text-align:left}.pill[lang="ar"] span{direction:rtl;text-align:right}
+.back{position:sticky;top:calc(env(safe-area-inset-top,0px) + 8px);z-index:5;font:inherit;font-size:15px;font-weight:700;margin:0 0 14px;padding:8px 18px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.robot{position:fixed;left:50%;bottom:-4vh;transform:translateX(-50%);width:min(420px,80vw);opacity:.4;z-index:0;pointer-events:none}
+.tabs{display:none}
+.tabs button{font:inherit;font-weight:700;padding:9px 26px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+button:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.cv{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:30px 28px;backdrop-filter:blur(6px)}
+.cv[hidden]{display:none}
+.cv h2{margin:30px 0 10px;font-size:20px;font-weight:800;color:var(--accent);padding-bottom:6px;border-bottom:1px solid var(--line)}
+.cv h2:first-child{margin-top:0}
+.cv p{margin:0 0 8px}
+.cv dl{margin:0}.cv dt{font-weight:700;margin-top:10px}.cv dd{margin:0;color:var(--muted)}
+.course{margin:0 0 16px}.course h3{margin:0;font-size:17px;font-weight:700}
+.course .meta{font-size:14.5px;color:var(--muted)}
+.course p{margin:2px 0 0}
+.cv ul{margin:6px 0 0;padding-inline-start:22px}.cv li{margin:4px 0}
+.cv[lang="en"]{direction:ltr;text-align:left}
+.print{display:block;margin:22px auto 0;font:inherit;font-size:15px;padding:8px 20px;border-radius:8px;border:1.5px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
+footer{text-align:center;margin-top:26px;font-size:14px;color:var(--muted)}
+@media print{#net,.robot,.back,.home,.tabs,.print,footer{display:none}.cv{border:0;background:#fff;color:#000}.cv[hidden]{display:none}}
+</style>
+</head>
+<body>
+<canvas id="net" aria-hidden="true"></canvas>
+<svg class="robot" viewBox="0 0 400 420" aria-hidden="true"><defs><radialGradient id="g" cx="50%" cy="40%" r="60%"><stop offset="0" stop-color="#5FD8F0" stop-opacity=".55"/><stop offset="1" stop-color="#5FD8F0" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="190" r="190" fill="url(#g)"/><rect x="95" y="60" width="210" height="250" rx="100" fill="#0C1C45" stroke="#5FD8F0" stroke-opacity=".7" stroke-width="3"/><circle cx="95" cy="190" r="34" fill="#0C1C45" stroke="#5FD8F0" stroke-width="4"/><circle cx="305" cy="190" r="34" fill="#0C1C45" stroke="#5FD8F0" stroke-width="4"/><rect x="135" y="150" width="130" height="64" rx="32" fill="#061233" stroke="#5FD8F0" stroke-opacity=".6" stroke-width="2"/><circle cx="170" cy="182" r="14" fill="#5FD8F0"/><circle cx="230" cy="182" r="14" fill="#5FD8F0"/><path d="M165 262q35 22 70 0" fill="none" stroke="#5FD8F0" stroke-opacity=".6" stroke-width="4" stroke-linecap="round"/><path d="M150 310v60h100v-60" fill="#0C1C45" stroke="#5FD8F0" stroke-opacity=".5" stroke-width="3"/></svg>
+<main>
+<header>
+<h1>جمانة الزهراني</h1>
+<p class="en-name">Jumana Alzahrani</p>
+<p class="role">طالبة دبلوم ذكاء اصطناعي<span>Artificial Intelligence Diploma Student</span></p>
+<p class="contact"><span>جدة | Jeddah</span><a href="mailto:jumana.alzahrani@outlook.sa">jumana.alzahrani@outlook.sa</a><a href="tel:+966506376614" dir="ltr">+966-50-637-6614</a></p>
+</header>
+<nav class="home" id="home" aria-label="السيرة الذاتية / CV">
+<button class="pill" type="button" id="b-ar" lang="ar"><span>السيرة الذاتية باللغة العربية</span><svg viewBox="0 0 24 24" fill="none" stroke="#4A6BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+<button class="pill" type="button" id="b-en" lang="en"><span>English CV</span><svg viewBox="0 0 24 24" fill="none" stroke="#4A6BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+</nav>
+
+<section class="cv" id="ar" lang="ar" hidden>
+<button class="back" type="button" data-back>الرجوع</button>
+<h2>الملخص المهني</h2>
+<p>طالبة دبلوم ذكاء اصطناعي في جامعة جدة (التخرج المتوقع 2027)، لدي أساس معرفي في Python وتحليل البيانات باستخدام Power BI ومفاهيم تعلم الآلة، وأكملت أكثر من 20 دورة وتدريبًا من IBM SkillsBuild وCisco وHuawei خلال 2026. أتعلم باستمرار بدافع ذاتي وشغف، وأسعى لتحويل معرفتي الأكاديمية إلى خبرة عملية في مجال الذكاء الاصطناعي وتحليل البيانات.</p>
+<h2>التعليم</h2>
+<p><strong>دبلوم ذكاء اصطناعي</strong> - جامعة جدة | التخرج المتوقع: 2027</p>
+<h2>المهارات</h2>
+<dl>
+<dt>البرمجة وتحليل البيانات</dt><dd>Python، Power BI، تحليل البيانات، كتابة وتنظيم الأكواد البرمجية</dd>
+<dt>الذكاء الاصطناعي</dt><dd>Machine Learning (أساسيات تعلم الآلة)، الذكاء الاصطناعي التوليدي (Generative AI)، الشبكات العصبية والتعلم العميق (أساسيات)، مفاهيم الذكاء الاصطناعي (NLP &amp; Computer Vision)</dd>
+<dt>الأدوات</dt><dd>Microsoft Office</dd>
+<dt>المهارات الشخصية</dt><dd>التفكير المنطقي والتحليلي، حل المشكلات، التعلم الذاتي المستمر، العمل الجماعي، إدارة الوقت</dd>
+</dl>
+<h2>الدورات والشهادات</h2>
+<div class="course"><h3>تعلم الآلة</h3><div class="meta">IBM SkillsBuild | 12 نوفمبر 2026</div><p>تدريب النماذج باستخدام البيانات، وأساليب التصنيف والتنبؤ، وتوظيف تعلم الآلة في تحليل البيانات واتخاذ القرارات.</p></div>
+<div class="course"><h3>أساسيات Python 1</h3><div class="meta">Cisco Networking Academy | 9 نوفمبر 2026</div><p>المتغيرات وأنواع البيانات، والشروط والحلقات التكرارية، والدوال، مع تمارين عملية عززت التفكير المنطقي وحل المشكلات.</p></div>
+<div class="course"><h3>الذكاء الكامن وراء الذكاء الاصطناعي</h3><div class="meta">IBM SkillsBuild | 19 سبتمبر 2026</div><p>مبادئ عمل أنظمة الذكاء الاصطناعي، ودور البيانات والخوارزميات في بناء النماذج الذكية في مختلف القطاعات.</p></div>
+<div class="course"><h3>مقدمة في الذكاء الاصطناعي</h3><div class="meta">IBM SkillsBuild | 17 سبتمبر 2026</div><p>المفاهيم الأساسية للذكاء الاصطناعي وتطبيقاته، ومجالاته مثل تعلم الآلة ومعالجة اللغة الطبيعية ورؤية الحاسب.</p></div>
+<div class="course"><h3>مسرد أساسيات الذكاء الاصطناعي</h3><div class="meta">IBM SkillsBuild | 17 سبتمبر 2026</div><p>المصطلحات والمفاهيم التقنية الشائعة في الذكاء الاصطناعي، لبناء قاعدة معرفية قوية في التخصص.</p></div>
+<div class="course"><h3>أساسيات البرمجة بلغة Python</h3><div class="meta">Huawei ICT Academy | 11 سبتمبر 2026</div><p>أساسيات البرمجة بلغة Python وتنظيم الأكواد والتعامل مع المتغيرات والعمليات، وبناء برامج بسيطة.</p></div>
+<div class="course"><h3>دورات وأنشطة أخرى - IBM SkillsBuild</h3><ul><li>التفاعل مع الذكاء الاصطناعي | 18 نوفمبر 2026</li><li>أسس الذكاء الاصطناعي التوليدي | 18 نوفمبر 2026</li><li>الذكاء الاصطناعي في العالم الحقيقي | 18 نوفمبر 2026</li><li>استكشاف الذكاء الاصطناعي | 18 نوفمبر 2026</li><li>مقدمة في مفاهيم البيانات | 17 نوفمبر 2026</li><li>أشكال الذكاء الاصطناعي ووظائفه | 17 نوفمبر 2026</li><li>الشبكات العصبية والتعلم العميق | 17 نوفمبر 2026</li><li>مسار أساسيات الذكاء الاصطناعي: أسس فهم الذكاء الاصطناعي | 17 نوفمبر 2026</li><li>معامل تطبيقية باستخدام IBM Bob (الذكاء الاصطناعي في الرياضة والذكاء الاصطناعي في الفنون وتصحيح الأكواد) | 3 و 12 نوفمبر 2026</li><li>IBM Bob في دورة حياة تطوير البرمجيات | 3 نوفمبر 2026</li><li>مسرد الذكاء الاصطناعي | 3 نوفمبر 2026</li><li>نظرة عامة على رحلة التعلم | 3 نوفمبر 2026</li><li>الإنشاء مع IBM Bob: من الأفكار إلى الحلول الذكية (فعالية) | 12 نوفمبر 2026</li><li>كيف يغيّر IBM Bob وأدوات الذكاء الاصطناعي طريقة بناء الحلول | 20 سبتمبر 2026</li></ul></div>
+<button class="print" type="button" onclick="window.print()">طباعة أو حفظ PDF</button>
+<button class="print" type="button" data-back>الرجوع للقائمة</button>
+</section>
+
+<section class="cv" id="en" lang="en" hidden>
+<button class="back" type="button" data-back>Back</button>
+<h2>Professional Summary</h2>
+<p>Artificial Intelligence diploma student at the University of Jeddah (expected graduation 2027) with a foundation in Python, data analysis with Power BI, and machine learning concepts. Completed more than 20 courses and trainings from IBM SkillsBuild, Cisco, and Huawei in 2026. A self-motivated, continuous learner who aims to turn academic knowledge into practical experience in AI and data analysis.</p>
+<h2>Education</h2>
+<p><strong>Diploma in Artificial Intelligence</strong> - University of Jeddah | Expected graduation: 2027</p>
+<h2>Skills</h2>
+<dl>
+<dt>Programming &amp; Data Analysis</dt><dd>Python, Power BI, Data Analysis, Writing and Organizing Code</dd>
+<dt>Artificial Intelligence</dt><dd>Machine Learning (fundamentals), Generative AI, Neural Networks and Deep Learning (fundamentals), AI Concepts (NLP &amp; Computer Vision)</dd>
+<dt>Tools</dt><dd>Microsoft Office</dd>
+<dt>Soft Skills</dt><dd>Logical and Analytical Thinking, Problem Solving, Continuous Self-Learning, Teamwork, Time Management</dd>
+</dl>
+<h2>Courses &amp; Certificates</h2>
+<div class="course"><h3>Machine Learning</h3><div class="meta">IBM SkillsBuild | November 12, 2026</div><p>Model training with data, classification and prediction methods, and applying machine learning to data analysis and decision-making.</p></div>
+<div class="course"><h3>Python Essentials 1</h3><div class="meta">Cisco Networking Academy | November 9, 2026</div><p>Variables, data types, conditions, loops, and functions, with hands-on exercises that strengthened logical thinking and problem solving.</p></div>
+<div class="course"><h3>The Intelligence Behind AI</h3><div class="meta">IBM SkillsBuild | September 19, 2026</div><p>Principles behind AI systems and how they work, and the role of data and algorithms in building intelligent models across industries.</p></div>
+<div class="course"><h3>Introduction to Artificial Intelligence</h3><div class="meta">IBM SkillsBuild | September 17, 2026</div><p>Core AI concepts and modern applications, and fields such as machine learning, natural language processing, and computer vision.</p></div>
+<div class="course"><h3>AI Fundamentals Glossary</h3><div class="meta">IBM SkillsBuild | September 17, 2026</div><p>Common AI terminology and technical concepts, building a strong knowledge base in the field.</p></div>
+<div class="course"><h3>Python Programming Basics</h3><div class="meta">Huawei ICT Academy | September 11, 2026</div><p>Python fundamentals, code organization, working with variables and operations, and building simple programs.</p></div>
+<div class="course"><h3>Additional Courses &amp; Activities - IBM SkillsBuild</h3><ul><li>Interacting with AI | November 18, 2026</li><li>Foundations in Generative AI | November 18, 2026</li><li>AI in the Real World | November 18, 2026</li><li>Exploring Artificial Intelligence | November 18, 2026</li><li>Introduction to Data Concepts | November 17, 2026</li><li>AI Forms and Functions | November 17, 2026</li><li>Neural Networks and Deep Learning | November 17, 2026</li><li>Learning Plan: AI Fundamentals - Foundations for Understanding AI | November 17, 2026</li><li>IBM Bob hands-on labs (AI in Sports, AI in Arts, debugging) | November 3 and 12, 2026</li><li>IBM Bob in the Software Development Lifecycle | November 3, 2026</li><li>Artificial Intelligence Glossary | November 3, 2026</li><li>Learning Journey Overview | November 3, 2026</li><li>Build with IBM Bob: From Ideas to Intelligent Solutions (event) | November 12, 2026</li><li>How IBM Bob and AI Tools Are Changing the Way Solutions Are Built | September 20, 2026</li></ul></div>
+<button class="print" type="button" onclick="window.print()">Print or save as PDF</button>
+<button class="print" type="button" data-back>Back to menu</button>
+</section>
+<footer>جمانة الزهراني · Jumana Alzahrani</footer>
+</main>
+<script>
+(function(){
+var home=document.getElementById('home'),ar=document.getElementById('ar'),en=document.getElementById('en');
+function show(v,push){home.hidden=v!=='home';ar.hidden=v!=='ar';en.hidden=v!=='en';window.scrollTo(0,0);if(push){try{location.hash=v==='home'?'':v}catch(e){}}}
+document.getElementById('b-ar').onclick=function(){show('ar',true)};
+document.getElementById('b-en').onclick=function(){show('en',true)};
+Array.prototype.forEach.call(document.querySelectorAll('[data-back]'),function(b){b.onclick=function(){show('home',true)}});
+function fromHash(){var h=location.hash;show(h==='#ar'?'ar':h==='#en'?'en':'home',false)}
+window.addEventListener('hashchange',fromHash);fromHash();
+
+var c=document.getElementById('net'),x=c.getContext('2d'),W,H,pts=[],dpr=Math.min(window.devicePixelRatio||1,2);
+var still=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function rgb(){return getComputedStyle(document.documentElement).getPropertyValue('--node').trim()||'11,122,115'}
+function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0);
+var n=Math.round(Math.min(70,Math.max(28,W*H/20000)));pts=[];
+for(var i=0;i<n;i++)pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25});}
+function draw(){var col=rgb(),D=150;x.clearRect(0,0,W,H);
+for(var i=0;i<pts.length;i++){var p=pts[i];
+if(!still){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;}
+for(var j=i+1;j<pts.length;j++){var q=pts[j],dx=p.x-q.x,dy=p.y-q.y,d=Math.sqrt(dx*dx+dy*dy);
+if(d<D){x.strokeStyle='rgba('+col+','+(0.22*(1-d/D))+')';x.lineWidth=1;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke();}}
+x.fillStyle='rgba('+col+',.38)';x.beginPath();x.arc(p.x,p.y,2.2,0,6.283);x.fill();}
+if(!still)requestAnimationFrame(draw);}
+size();draw();
+addEventListener('resize',function(){size();if(still)draw();});
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener&&window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',function(){if(still)draw()});
+})();
+</script>
+</body>
+</html>
